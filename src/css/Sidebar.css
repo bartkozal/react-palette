@@ -1,0 +1,25 @@
+.Sidebar {
+  flex-basis: 20%;
+  background-color: var(--color-primary);
+  color: white;
+  text-align: center;
+}
+
+.Sidebar a {
+  color: white;
+}
+
+.Sidebar .Palette {
+  max-width: 75%;
+  margin: var(--spacing-unit) auto;
+}
+
+.Sidebar .Palette-box:first-of-type {
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.Sidebar .Palette-box:last-of-type {
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}

@@ -1,0 +1,7 @@
+.Palette {
+  display: flex;
+}
+
+.Palette-box {
+  height: 25px;
+}

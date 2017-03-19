@@ -1,0 +1,9 @@
+:root {
+  --color-primary: #001f3f;
+  --border-radius: 5px;
+}
+
+a {
+  color: #0074d9;
+  text-decoration: none;
+}
