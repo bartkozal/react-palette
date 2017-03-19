@@ -1,0 +1,23 @@
+.Color {
+  flex-basis: calc(100% - var(--spacing-unit));
+}
+
+.Color-header {
+  display: flex;
+  justify-content: space-between;
+  margin: var(--spacing-unit);
+}
+
+.Color-sliders {
+  display: flex;
+  flex-direction: column;
+  margin: var(--spacing-unit);
+  margin-top: 0;
+}
+
+.Color-sliders label {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--spacing-unit);
+  margin-bottom: calc(var(--spacing-unit) / 2);
+}
