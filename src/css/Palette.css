@@ -3,5 +3,15 @@
 }
 
 .Palette-box {
+  position: relative;
   height: 150px;
+}
+
+.Palette-arrow {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  color: white;
+  font-size: calc(var(--font-base) * var(--font-ratio));
+  transform: translateX(-50%);
 }

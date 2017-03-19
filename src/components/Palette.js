@@ -5,9 +5,13 @@ class Palette extends Component {
   render() {
     const width = `${100 / this.props.colors.length}%`;
     const colorsList = this.props.colors.map(backgroundColor => {
+      const isActive = this.props.active === backgroundColor;
       return (
-        <div className="Palette-box"
-             style={{ width, backgroundColor }}></div>
+        <div className={`Palette-box`}
+             key={ backgroundColor }
+             style={{ width, backgroundColor }}>
+          {isActive && <i className="icon ion-arrow-up-b Palette-arrow"></i> }
+        </div>
       );
     });
 

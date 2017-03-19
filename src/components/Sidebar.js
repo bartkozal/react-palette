@@ -4,10 +4,13 @@ import '../css/Sidebar.css';
 
 class Sidebar extends Component {
   render() {
+    const palettes = this.props.palettes.map(palette => {
+      return <Palette key={ palette.id } colors={palette.colors} />;
+    });
+
     return (
       <div className="Sidebar">
-        <Palette colors={['#ff4136', '#ffdc00', '#dddddd', '#aaaaaa']} />
-        <Palette colors={['#b10dc9', '#7fdbff']} />
+        { palettes }
         <a href="#">
           <i className="icon ion-plus"></i>
         </a>
