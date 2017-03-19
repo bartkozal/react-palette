@@ -1,18 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+        <div>
+          <div>Red, Yellow, White, Grey</div>
+          <div>Purple, Blue</div>
+          <a href="#">Add palette</a>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+
+        <div>
+          <header>
+            <a href="#">Remove palette</a>
+            Name
+            <a href="#">Add color</a>
+          </header>
+          <div>Red, Yellow, White, Grey</div>
+          <div>
+            Hue
+            <input type="range"/>
+            Saturation
+            <input type="range" />
+            Lightness
+            <input type="range" />
+          </div>
+          <a href="#">Remove color</a>
+        </div>
       </div>
     );
   }
