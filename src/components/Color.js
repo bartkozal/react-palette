@@ -7,9 +7,13 @@ class Color extends Component {
     return (
       <div className="Color">
         <header className="Color-header">
-          <a href="#">x</a>
+          <a href="#">
+            <i className="icon ion-close"></i>
+          </a>
           #ff4136
-          <a href="#">+</a>
+          <a href="#">
+            <i className="icon ion-plus"></i>
+          </a>
         </header>
         <Palette colors={['#ff4136', '#ffdc00', '#dddddd', '#aaaaaa']} />
         <div className="Color-sliders">

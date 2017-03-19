@@ -8,7 +8,9 @@ class Sidebar extends Component {
       <div className="Sidebar">
         <Palette colors={['#ff4136', '#ffdc00', '#dddddd', '#aaaaaa']} />
         <Palette colors={['#b10dc9', '#7fdbff']} />
-        <a href="#">+</a>
+        <a href="#">
+          <i className="icon ion-plus"></i>
+        </a>
       </div>
     );
   }

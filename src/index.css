@@ -1,9 +1,15 @@
 :root {
   --color-primary: #001f3f;
+  --color-link: #0074d9;
+  --color-negative: #ddd;
   --border-radius: 5px;
 }
 
 a {
-  color: #0074d9;
+  color: var(--color-link);
   text-decoration: none;
+}
+
+.ion-close {
+  color: var(--color-negative);
 }
