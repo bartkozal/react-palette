@@ -23,6 +23,7 @@ class Sidebar extends Component {
         { palettes }
         <a href="#" onClick={e => {
           e.preventDefault()
+          e.stopPropagation()
           this.props.create()
           }}>
           <i className="icon ion-plus"></i>

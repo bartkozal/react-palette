@@ -119,6 +119,21 @@ export default (state, action) => {
         palettes,
         activePalette
       }
+    case 'SELECT_COLOR':
+      palettes = state.palettes.map(palette => {
+        if (isEqual(palette, state.activePalette)) {
+          activePalette = {
+            colors: palette.colors,
+            activeColor: action.payload.color
+          }
+          return activePalette
+        }
+        return palette
+      })
+      return {
+        palettes,
+        activePalette
+      }
     default:
       return state
   }

@@ -4,18 +4,18 @@ import rootReducer from './reducers'
 
 const palettes = [
   {
-    colors: ['#FF4136', '#FFDC00', '#DDDDDD', '#AAAAAA'],
-    activeColor: '#FF4136'
+    colors: ['#ff4136', '#ffdc00', '#dddddd', '#aaaaaa'],
+    activeColor: '#ff4136'
   },
   {
-    colors: ['#B10DC9', '#7fDBff'],
-    activeColor: '#B10DC9'
+    colors: ['#b10dc9', '#7fdbff'],
+    activeColor: '#b10dc9'
   }
 ]
 
 const activePalette = {
-  colors: ['#FF4136', '#FFDC00', '#DDDDDD', '#AAAAAA'],
-  activeColor: '#FF4136'
+  colors: ['#ff4136', '#ffdc00', '#dddddd', '#aaaaaa'],
+  activeColor: '#ff4136'
 }
 
 export default createStore(

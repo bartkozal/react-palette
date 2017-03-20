@@ -23,3 +23,12 @@ export const create = () => {
     }
   }
 }
+
+export const setActiveColor = color => {
+  return {
+    type: 'SELECT_COLOR',
+    payload: {
+      color
+    }
+  }
+}

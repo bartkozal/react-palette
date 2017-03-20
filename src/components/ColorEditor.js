@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Palette from './Palette'
+import PaletteContainer from '../containers/PaletteContainer'
 import hexToHsl from 'hex-to-hsl'
 import '../styles/ColorEditor.css'
 
@@ -29,8 +29,7 @@ class ColorEditor extends Component {
             <i className="icon ion-plus"></i>
           </a>
         </header>
-        <Palette colors={this.props.palette.colors}
-          active={this.props.palette.activeColor} />
+        <PaletteContainer />
         <div className="ColorEditor-sliders">
           <label>Hue <span>{colorSpace.hue}</span></label>
           <input min="0" max="360" value={colorSpace.hue} onChange={e => this.props.updateHue(e.target.value)} type="range" />
