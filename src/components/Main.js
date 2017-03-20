@@ -7,7 +7,7 @@ class Main extends Component {
   render() {
     return (
       <div className="Main">
-        <Sidebar palettes={this.props.palettes} />
+        <Sidebar palettes={this.props.palettes} active={this.props.activePalette} />
         <ColorEditor palette={this.props.activePalette} />
       </div>
     )
