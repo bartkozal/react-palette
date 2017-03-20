@@ -33,11 +33,11 @@ class ColorEditor extends Component {
         </header>
         <PaletteContainer />
         <div className="ColorEditor-sliders">
-          <label>Hue <span>{colorSpace.hue}</span></label>
+          <label>Hue <span>{colorSpace.hue}°</span></label>
           <input min="0" max="360" value={colorSpace.hue} onChange={e => this.props.updateHue(e.target.value)} type="range" />
-          <label>Saturation <span>{colorSpace.saturation}</span></label>
+          <label>Saturation <span>{colorSpace.saturation}%</span></label>
           <input min="0" max="100" value={colorSpace.saturation} onChange={e => this.props.updateSaturation(e.target.value)} type="range" />
-          <label>Lightness <span>{colorSpace.lightness}</span></label>
+          <label>Lightness <span>{colorSpace.lightness}%</span></label>
           <input min="0" max="100" value={colorSpace.lightness} onChange={e => this.props.updateLightness(e.target.value)} type="range" />
         </div>
       </div>
