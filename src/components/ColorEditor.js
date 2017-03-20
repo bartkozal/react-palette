@@ -1,9 +1,17 @@
-import React, { Component } from 'react';
-import Palette from './Palette';
-import '../styles/ColorEditor.css';
+import React, { Component } from 'react'
+import Palette from './Palette'
+import hexToHsl from 'hex-to-hsl'
+import '../styles/ColorEditor.css'
 
 class ColorEditor extends Component {
   render () {
+    const hsl = hexToHsl(this.props.palette.activeColor)
+    const colorSpace = {
+      hue: hsl[0],
+      saturation: hsl[1],
+      lightness: hsl[2]
+    }
+
     return this.props.palette ? (
       <div className="ColorEditor">
         <header className="ColorEditor-header">
@@ -24,16 +32,16 @@ class ColorEditor extends Component {
         <Palette colors={this.props.palette.colors}
           active={this.props.palette.activeColor} />
         <div className="ColorEditor-sliders">
-          <label>Hue <span>3</span></label>
-          <input min="0" max="360" defaultValue="3" type="range" />
-          <label>Saturation <span>79</span></label>
-          <input min="0" max="100" defaultValue="79" type="range" />
-          <label>Brightness <span>100</span></label>
-          <input min="0" max="100" defaultValue="100" type="range" />
+          <label>Hue <span>{colorSpace.hue}</span></label>
+          <input min="0" max="360" value={colorSpace.hue} onChange={e => this.props.updateHue(e.target.value)} type="range" />
+          <label>Saturation <span>{colorSpace.saturation}</span></label>
+          <input min="0" max="100" value={colorSpace.saturation} onChange={e => this.props.updateSaturation(e.target.value)} type="range" />
+          <label>Lightness <span>{colorSpace.lightness}</span></label>
+          <input min="0" max="100" value={colorSpace.lightness} onChange={e => this.props.updateLightness(e.target.value)} type="range" />
         </div>
       </div>
     ) : <div></div>
   }
 }
 
-export default ColorEditor;
+export default ColorEditor

@@ -17,3 +17,30 @@ export const remove = (color) => {
     }
   }
 }
+
+export const updateHue = (hue) => {
+  return {
+    type: 'UPDATE_HUE',
+    payload: {
+      hue
+    }
+  }
+}
+
+export const updateSaturation = (saturation) => {
+  return {
+    type: 'UPDATE_SATURATION',
+    payload: {
+      saturation
+    }
+  }
+}
+
+export const updateLightness = (lightness) => {
+  return {
+    type: 'UPDATE_LIGHTNESS',
+    payload: {
+      lightness
+    }
+  }
+}

@@ -15,6 +15,15 @@ const mapDispatchToProps = dispatch => {
     },
     remove (color) {
       dispatch(actions.remove(color))
+    },
+    updateHue (value) {
+      dispatch(actions.updateHue(value))
+    },
+    updateSaturation (value) {
+      dispatch(actions.updateSaturation(value))
+    },
+    updateLightness(value) {
+      dispatch(actions.updateLightness(value))
     }
   }
 }
