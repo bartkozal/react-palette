@@ -35,12 +35,14 @@ export default (state, action) => {
     case 'REMOVE_COLOR':
       palettes = state.palettes.map(palette => {
         if (isEqual(palette, state.activePalette)) {
+          const index = palette.colors.indexOf(action.payload.color)
+          const newIndex = index === 0 ? 0 : index - 1
           const colors = palette.colors.filter(color => {
             return color !== action.payload.color
           })
           activePalette = {
             colors,
-            activeColor: colors[0]
+            activeColor: colors[newIndex]
           }
           return activePalette
         }

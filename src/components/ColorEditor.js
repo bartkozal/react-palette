@@ -19,7 +19,9 @@ class ColorEditor extends Component {
             e.preventDefault()
             this.props.remove(this.props.palette.activeColor)
             }}>
-            <i className="icon ion-close"></i>
+            <i className="icon ion-close" style={{
+              visibility: this.props.palette.colors.length > 1 ? 'visible' : 'hidden'
+            }}></i>
           </a>
           {this.props.palette.activeColor}
           <a href="#" onClick={e => {
