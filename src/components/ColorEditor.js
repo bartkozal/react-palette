@@ -7,11 +7,17 @@ class ColorEditor extends Component {
     return this.props.palette ? (
       <div className="ColorEditor">
         <header className="ColorEditor-header">
-          <a href="#">
+          <a href="#" onClick={e => {
+            e.preventDefault()
+            this.props.remove(this.props.palette.activeColor)
+            }}>
             <i className="icon ion-close"></i>
           </a>
           {this.props.palette.activeColor}
-          <a href="#">
+          <a href="#" onClick={e => {
+            e.preventDefault()
+            this.props.add()
+            }}>
             <i className="icon ion-plus"></i>
           </a>
         </header>

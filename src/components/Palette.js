@@ -7,9 +7,11 @@ class Palette extends Component {
     const colorsList = this.props.colors.map((backgroundColor, index) => {
       const isActive = this.props.active === backgroundColor
       return (
-        <div className={`Palette-box`} key={ index } style={{ width, backgroundColor }}>
-          { isActive &&
-            <i className="icon ion-arrow-up-b Palette-arrow"></i> }
+        <div className={`Palette-box`}
+          key={ index }
+          style={{ width, backgroundColor }}
+          onClick={ e => { console.log(e) }}>
+          { isActive && <i className="icon ion-arrow-up-b Palette-arrow"></i> }
         </div>
       )
     })

@@ -21,7 +21,8 @@ const mapDispatchToProps = dispatch => {
 }
 
 const SidebarContainer = connect(
-  mapStateToProps, mapDispatchToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(Sidebar)
 
 export default SidebarContainer
