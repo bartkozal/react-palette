@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import Palette from './Palette';
-import '../css/Sidebar.css';
+import React, { Component } from 'react'
+import Palette from './Palette'
+import '../styles/Sidebar.css'
 
 class Sidebar extends Component {
   render() {
-    const palettes = this.props.palettes.map(palette => {
-      return <Palette key={ palette.id } colors={palette.colors} />;
-    });
+    const palettes = this.props.palettes.map((palette, index) => {
+      return <Palette key={ index } colors={palette.colors} />;
+    })
 
     return (
       <div className="Sidebar">
@@ -15,8 +15,8 @@ class Sidebar extends Component {
           <i className="icon ion-plus"></i>
         </a>
       </div>
-    );
+    )
   }
 }
 
-export default Sidebar;
+export default Sidebar

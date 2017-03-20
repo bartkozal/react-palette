@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import Palette from './Palette';
-import '../css/Color.css';
+import '../styles/Color.css';
 
 class Color extends Component {
   render() {
-    return (
+    return this.props.palette ? (
       <div className="Color">
         <header className="Color-header">
           <a href="#">
             <i className="icon ion-close"></i>
           </a>
-          { this.props.palette.activeColor }
+          {this.props.palette.activeColor}
           <a href="#">
             <i className="icon ion-plus"></i>
           </a>
         </header>
         <Palette colors={this.props.palette.colors}
-                 active={this.props.palette.activeColor} />
+          active={this.props.palette.activeColor} />
         <div className="Color-sliders">
           <label>Hue <span>3</span></label>
           <input min="0" max="360" defaultValue="3" type="range" />
@@ -26,7 +26,7 @@ class Color extends Component {
           <input min="0" max="100" defaultValue="100" type="range" />
         </div>
       </div>
-    );
+    ) : <div></div>
   }
 }
 
