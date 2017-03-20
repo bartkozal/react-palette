@@ -5,13 +5,14 @@ import '../styles/Sidebar.css'
 import '../styles/SidebarPalette.css'
 
 class Sidebar extends Component {
-  render() {
+  render () {
     const palettes = this.props.palettes.map((palette, index) => {
       const isActive = isEqual(palette, this.props.active)
       const className = isActive ? 'SidebarPalette SidebarPalette-active' : 'SidebarPalette'
 
       return (
-        <div key={index} className={className}>
+        <div key={index} className={className} onClick={
+          e => { this.props.select(palette) }}>
           <Palette colors={palette.colors} />
         </div>
       )
@@ -20,7 +21,10 @@ class Sidebar extends Component {
     return (
       <div className="Sidebar">
         { palettes }
-        <a href="#">
+        <a href="#" onClick={e => {
+          e.preventDefault()
+          this.props.create()
+          }}>
           <i className="icon ion-plus"></i>
         </a>
       </div>

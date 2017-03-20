@@ -3,7 +3,7 @@ import Palette from './Palette';
 import '../styles/ColorEditor.css';
 
 class ColorEditor extends Component {
-  render() {
+  render () {
     return this.props.palette ? (
       <div className="ColorEditor">
         <header className="ColorEditor-header">

@@ -1,5 +1,6 @@
 .Palette {
   display: flex;
+  cursor: pointer;
 }
 
 .Palette-box {

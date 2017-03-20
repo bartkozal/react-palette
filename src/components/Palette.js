@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../styles/Palette.css';
 
 class Palette extends Component {
-  render() {
+  render () {
     const width = `${100 / this.props.colors.length}%`
     const colorsList = this.props.colors.map((backgroundColor, index) => {
       const isActive = this.props.active === backgroundColor

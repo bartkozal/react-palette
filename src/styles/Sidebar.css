@@ -6,5 +6,7 @@
 }
 
 .Sidebar a {
+  display: block;
+  margin-top: var(--spacing-unit);
   color: white;
 }
