@@ -1,21 +1,21 @@
-.Color {
+.ColorEditor {
   flex-basis: calc(100% - var(--spacing-unit));
 }
 
-.Color-header {
+.ColorEditor-header {
   display: flex;
   justify-content: space-between;
   margin: var(--spacing-unit);
 }
 
-.Color-sliders {
+.ColorEditor-sliders {
   display: flex;
   flex-direction: column;
   margin: var(--spacing-unit);
   margin-top: 0;
 }
 
-.Color-sliders label {
+.ColorEditor-sliders label {
   display: flex;
   justify-content: space-between;
   margin-top: var(--spacing-unit);
