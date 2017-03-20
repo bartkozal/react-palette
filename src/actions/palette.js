@@ -10,7 +10,7 @@ export const select = palette => {
 }
 
 export const create = () => {
-  const color = randomColor().hexString()
+  const color = randomColor().hexString().toLowerCase()
   const palette = {
     colors: [color],
     activeColor: color

@@ -10,7 +10,7 @@ class Palette extends Component {
         <div className={`Palette-box`}
           key={ index }
           style={{ width, backgroundColor }}
-          onClick={ e => this.props.setActiveColor(backgroundColor) }>
+          onClick={e => this.props.setActiveColor && this.props.setActiveColor(backgroundColor) }>
           { isActive && <i className="icon ion-arrow-up-b Palette-arrow"></i> }
         </div>
       )

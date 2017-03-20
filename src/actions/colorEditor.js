@@ -4,7 +4,7 @@ export const add = () => {
   return {
     type: 'ADD_COLOR',
     payload: {
-      color: randomColor().hexString()
+      color: randomColor().hexString().toLowerCase()
     }
   }
 }
