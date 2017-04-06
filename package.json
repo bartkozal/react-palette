@@ -2,6 +2,7 @@
   "name": "palette",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/bkzl/react-palette",
   "dependencies": {
     "hex-to-hsl": "^1.0.2",
     "hsl-to-hex": "^1.0.0",
